@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anniversary Surprise</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="content">
+        <div class="header">
+            <h1 class="text-happy">Happy 1 Month Anniversary!</h1>
+        </div>
+        <div class="heart" id="heart"></div>
+        <div class="envelope" id="envelope" onclick="openEnvelope()">
+            <div class="envelope-top"></div>
+            <div class="envelope-body"></div>
+            <div class="letter"  id="letter">
+                <p>ก่อนอื่นเลยก็วันนี้เป็นวันครบรอบที่เราคบกันมา 1 เดือน มีทั้งช่วงที่มีความสุข
+                    ช่วงที่เราไม่เข้าใจกันบ้าง
+                    แต่เราก็ผ่านมันมาได้ด้วยดี ขอบคุณที่อยู่เคียงข้างกันเสมอมา
+                    ขอให้หนูประสบความสำเร็จในทุกๆด้าน ไปเรียนที่จีนแล้วก็ขอให้มีความสุขมากๆนะคะ
+                    ที่พี่ดึงเวลามาถึงวันนี้เพราะพี่เตรียมสิ่งนี้ไว้ให้ ไม่ว่าหนูจะให้คำตอบพี่แบบไหน
+                    พี่ก็เคารพการตัดสินใจของหนูนะ อย่างน้อยโลกก็ได้พาเรามาพบเจอกัน ถึงจะเป็นช่วงเวลาสั้นๆ
+                    ที่ไม่นานมาก เพียงแค่ 2 เดือน แต่พี่ก็รู้สึกดีมากๆ ขอบคุณหนูสำหรับทุกๆอย่างเลยนะคะ
+                    สุดท้ายนี้พี่มีเรื่องที่อยากของหนูหนึ่งอย่าง ขอให้หนูใช้ชีวิตให้มีวคามสุขนะคนเก่งของพี่
+                </p>
+                <button class="button" onclick="showVideo()">เซอร์ไพรส์</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-container" id="videoContainer" style="display: none;">
+        <video controls>
+            <source src="video.mp4" type="video/mp4">
+            วิดีโอของคุณไม่รองรับเบราว์เซอร์นี้
+        </video>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

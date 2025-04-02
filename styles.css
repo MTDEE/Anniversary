@@ -1,0 +1,109 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffe6f2;
+    font-family: Arial, sans-serif;
+}
+
+.text-happy {
+    font-size: 2.5rem;
+    color: #ff4d94;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.text-happy span {
+    font-size: 3rem;
+    color: #ff4d94;
+    font-weight: bold;
+}
+
+.header {
+    padding-bottom: 180px;
+    color: rgb(221, 47, 76);
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.button {
+    background-color: #ff4d94;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.envelope {
+    width: 80vw; /* ขยายตามหน้าจอ */
+    max-width: 400px; /* กำหนดขนาดสูงสุด */
+    height: auto;
+    position: relative;
+    cursor: pointer;
+}
+
+.envelope-body {
+    width: 100%;
+    height: 150px;
+    background-color: lightpink;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+
+.envelope-top {
+    width: 100%;
+    height: 50px;
+    background: pink;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    transform-origin: top;
+    transition: transform 1s ease-in-out;
+    z-index: 2;
+}
+
+.letter {
+    width: 90%;
+    max-width: 380px;
+    min-height: 200px; /* ปรับให้จดหมายสูงขึ้น */
+    background: rgb(245, 183, 214);
+    text-align: center;
+    padding: 15px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0;
+    display: none;
+    z-index: 3;
+    font-size: 1rem;
+    line-height: 1.5;
+    overflow-wrap: break-word; /* ทำให้ข้อความขึ้นบรรทัดใหม่ถ้ายาวเกิน */
+}
+
+.envelope.open .envelope-top {
+    transform: rotateX(180deg);
+}
+
+.envelope.open .letter {
+    display: block;
+    transform: translateX(-50%) translateY(0%);
+    opacity: 1;
+}
+/* ปรับขนาดตามหน้าจอเล็ก */
+@media (max-width: 500px) {
+    .letter {
+        font-size: 0.9rem;
+    }
+}
